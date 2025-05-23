@@ -8,6 +8,9 @@ package desafio_dio_basico;
  *
  * @author Windows 10 PRO
  */
-public class ContaPoupanca extends Conta{
- 
+public interface IConta {
+    
+    void sacar(double valor);
+    void depositar(double valor);
+    void transferir(double valor, Conta contaDestino);    
 }

@@ -8,6 +8,8 @@ package desafio_dio_basico;
  *
  * @author Windows 10 PRO
  */
-public class ContaCorrente {
+public class ContaCorrente extends Conta {
+    
+    
     
 }
