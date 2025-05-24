@@ -37,17 +37,20 @@ public abstract class Conta implements IConta {
 
     @Override
     public void sacar(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       this.saldo -= valor;
     }
 
     @Override
     public void depositar(double valor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        saldo += valor;
+        
     }
 
     @Override
     public void transferir(double valor, Conta contaDestino) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.sacar(valor);
+        contaDestino.depositar(valor);
+        
     }
     
     
