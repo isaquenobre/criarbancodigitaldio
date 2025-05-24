@@ -9,9 +9,19 @@ package desafio_dio_basico;
  * @author Windows 10 PRO
  */
 public abstract class Conta implements IConta {
-    private int agencia;
-    private int numero;
-    private double salario;
+    
+    private static final int AGENCIA_PADRAO = 1;
+    private static int SEQUENCIAL = 1;
+    
+    protected int agencia;
+    protected int numero;
+    protected double saldo;
+    
+  
+    public Conta() {
+        this.agencia = Conta.AGENCIA_PADRAO;
+        this.numero = SEQUENCIAL++;
+    }
 
     public int getAgencia() {
         return agencia;
@@ -21,8 +31,8 @@ public abstract class Conta implements IConta {
         return numero;
     }
 
-    public double getSalario() {
-        return salario;
+    public double getSaldo() {
+        return saldo;
     }
 
     @Override
